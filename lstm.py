@@ -1,5 +1,5 @@
 from mlflow import log_metric
-MODEL_DIR = "/opt/dkube/output"
+MODEL_DIR = "./opt/dkube/output"
 
 import pandas as pd
 import numpy as np
@@ -55,10 +55,10 @@ from tensorflow.keras.layers import Flatten,Dropout
 from tensorflow.keras.layers import BatchNormalization
 from keras.layers import Bidirectional
 
-import keras
+import tensorflow.keras as keras
 opt = keras.optimizers.Adam(learning_rate=0.01)
 
-import keras
+import tensorflow.keras as keras
 vector_feature = 200
 model = Sequential()
 model.add(Embedding(voc_size,vector_feature,input_length=set_length))
