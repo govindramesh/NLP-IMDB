@@ -1,3 +1,4 @@
+import os
 from mlflow import log_metric
 MODEL_DIR = "./opt/dkube/output"
 
