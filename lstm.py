@@ -93,7 +93,7 @@ class loggingCallback(keras.callbacks.Callback):
         log_metric ("val_accuracy", logs["val_accuracy"], step=epoch)
 
 # Replace training command for formal training
-model.fit(X_train, Y_train, batch_size=batch_size, epochs=epochs, verbose=0, validation_split=0.1, 
+model.fit(X_train, y_train,validation_data=(X_test,y_test),epochs=4,batch_size=64,verbose=1,
         callbacks=[loggingCallback(), tf.keras.callbacks.TensorBoard(log_dir=MODEL_DIR)])
         
 os.makedirs(f"{MODEL_DIR}/1", exist_ok=True)
