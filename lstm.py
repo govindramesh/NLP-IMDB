@@ -97,5 +97,5 @@ class loggingCallback(keras.callbacks.Callback):
 model.fit(X_train, y_train,validation_data=(X_test,y_test),epochs=4,batch_size=64,verbose=1,
         callbacks=[loggingCallback(), tf.keras.callbacks.TensorBoard(log_dir=MODEL_DIR)])
         
-os.makedirs(f"{MODEL_DIR}/1", exist_ok=True)
-tf.saved_model.save(model,f"{MODEL_DIR}/1")
+os.makedirs(f"{MODEL_DIR}", exist_ok=True)
+tf.saved_model.save(model,f"{MODEL_DIR}")
