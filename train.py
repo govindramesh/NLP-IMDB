@@ -5,7 +5,7 @@ MODEL_DIR = "/opt/dkube/output"
 import pandas as pd
 import numpy as np
 
-npzfile = np.load("/tmp/imdb_preprocessed.npz")
+npzfile = np.load("/imdb/imdb_preprocessed.npz")
 x_final = npzfile["x"]
 y_final = npzfile["y"]
 
