@@ -1,6 +1,6 @@
 import os
 from mlflow import log_metric
-MODEL_DIR = "./opt/dkube/output"
+MODEL_DIR = "/opt/dkube/output"
 
 import pandas as pd
 import numpy as np
