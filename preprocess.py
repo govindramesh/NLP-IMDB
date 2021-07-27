@@ -40,6 +40,7 @@ total_vocab=len(word_index)
 
 train = t.texts_to_sequences(data_lem)
 
+from tensorflow.keras.preprocessing.sequence import pad_sequences
 set_length = 700
 embedded_docs_train = pad_sequences(train,padding='pre',maxlen =set_length)
 
